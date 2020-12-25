@@ -5457,8 +5457,7 @@ void Clang::ConstructJob(Compilation &C, const JobAction &JA,
     CmdArgs.push_back("-fencode-extended-block-signature");
 
   if (Args.hasFlag(options::OPT_fcoroutines_ts, options::OPT_fno_coroutines_ts,
-                   false) &&
-      types::isCXX(InputType)) {
+                   false)) {
     CmdArgs.push_back("-fcoroutines-ts");
   }
 
